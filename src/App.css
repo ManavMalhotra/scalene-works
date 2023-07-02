@@ -1,0 +1,22 @@
+.bg-hero-image{
+    background-image: url('https://images.unsplash.com/photo-1517245386807-5a4f0f6d0b8b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGJhY2tncm91bmQlMjB3b3JsZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: 0.8;
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+    -moz-filter: blur(0.5px);
+    -o-filter: blur(0.5px);
+    -ms-filter: blur(0.5px);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background: radial-gradient(386.05% 54.46% at 50.00% 48.15%, rgba(0, 0, 0, 0.40) 0%, rgba(126, 56, 183, 0.40) 96.02%, rgba(0, 0, 0, 0.00) 100%), url("./assets/images/hero.png"), lightgray 50% / cover no-repeat;
+}
