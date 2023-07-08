@@ -1,0 +1,47 @@
+.navbar-brand {
+  font-family: Manrope;
+  font-size: 1.6rem;
+  font-style: normal;
+}
+
+nav {
+  color: white;
+}
+
+nav > button {
+  border-radius: 1.6rem;
+}
+
+ul > li > a {
+  color: white;
+}
+
+ul > li > a:hover {
+  border-bottom: 3px solid #7779e5;
+}
+
+.btn {
+  display: flex;
+  padding: 0.5625rem 0.625rem;
+  width: auto;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 1.625rem;
+  background: linear-gradient(
+    183deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(20px);
+}
+
+.btn-signup {
+  padding: .5rem 2rem;
+  background: linear-gradient(246deg, #0ffb00 0%, #0d8c05 100%);
+  backdrop-filter: blur(20px);
+}
+.btn-search{
+  width: 4rem;
+}
