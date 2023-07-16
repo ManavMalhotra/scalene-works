@@ -11,19 +11,13 @@ import "swiper/css/pagination";
 import "./components/styles.css";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import Navbar from "./components/Navbar";
-
+import Hero from "./components/Hero";
+import Company from "./components/Compnay";
 const App = () => {
   return (
-    <div className="container">
+    <div class="container">
       <Navbar />
-
-      <GridContainer>
-        <div className="col-span-1"></div>
-        <div className="col-span-12 bg-hero-image bg-cover bg-center">
-        </div>
-
-        <div className="col-span-1"></div>
-      </GridContainer>
+      <Hero />
     </div>
   );
 };
