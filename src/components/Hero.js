@@ -5,7 +5,7 @@ import CompanyPartners from "./CompanyPartners";
 const Hero = () => {
   return (
     <>
-      <div class="Hero">
+      <div class="hero">
         <div class="hero-text">
           <div class="hero-t1">
             <h3> #because Scalene Works</h3>
