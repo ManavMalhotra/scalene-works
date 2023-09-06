@@ -60,30 +60,32 @@ export default function Navbar() {
             height="46"
           />
         </Link>
-        <ul className="flex flex-row gap-3">
-          <li className="gap-3 font-semibold">
-            <Link href="/products">Products</Link>
-          </li>
-          <li className="gap-3 font-semibold">
-            <Link href="/solutions">Solutions</Link>
-          </li>
-          <li className="gap-3 font-semibold">
-            <Link href="/resources">Resources</Link>
-          </li>
-          <li className="gap-3 font-semibold">
-            <Link href="/pricing">Pricing</Link>
-          </li>
-        </ul>
+        <div className="flex flex-row flex-wrap gap-3 ">
+          <Link href="/products" className="gap-3 font-semibold">
+            Products
+          </Link>
+          <Link href="/solutions" className="gap-3 font-semibold">
+            Solutions
+          </Link>
+          <Link href="/resources" className="gap-3 font-semibold">
+            Resources
+          </Link>
+          <Link href="/pricing" className="gap-3 font-semibold">
+            Pricing
+          </Link>
+        </div>
 
-        <div className="flex">
-          <Button variant="green"
-          className="py-2 px-4 rounded-[26px]  bg-gradient-to-r from-success to-success2">
+        <div className="flex flex-wrap gap-3">
+          <Button
+            variant="green"
+            className="py-2 px-4 rounded-[26px]  bg-gradient-to-r from-success to-success2"
+          >
             Signup
           </Button>
           <Button variant="outline" className=" py-2 px-4 rounded-[26px]">
-            <Search/>
+            <Search />
           </Button>
-          
+
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button

@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors: {
         'primary-green': "#0FFB00",
-        'primary-green2': "#0D8C05"
+        'primary-green2': "#0D8C05",
+        'fuchsia': "#C4299A"
       }
     },
   },
