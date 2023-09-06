@@ -23,24 +23,24 @@ import {
 
 export default function Navbar() {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("english");
+  const [value, setValue] = React.useState("en");
 
   const frameworks = [
     {
-      value: "english",
-      label: "English",
+      value: "en",
+      label: "En",
     },
     {
-      value: "sveltekit",
-      label: "SvelteKit",
+      value: "hn",
+      label: "Hn",
     },
     {
-      value: "nuxt.js",
-      label: "Nuxt.js",
+      value: "cn",
+      label: "Cn",
     },
     {
-      value: "remix",
-      label: "Remix",
+      value: "fr",
+      label: "Fr",
     },
     {
       value: "astro",
@@ -49,8 +49,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="container my-2">
-      <div className="flex flex-row justify-around items-center">
+    <nav className="container w-full mx-auto my-6 max-w-7xl">
+      <div className="flex flex-row items-center justify-around">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -61,34 +61,36 @@ export default function Navbar() {
           />
         </Link>
         <ul className="flex flex-row gap-3">
-          <li className={styles.nav_items}>
+          <li className="gap-3 font-semibold">
             <Link href="/products">Products</Link>
           </li>
-          <li className={styles.nav_items}>
+          <li className="gap-3 font-semibold">
             <Link href="/solutions">Solutions</Link>
           </li>
-          <li className={styles.nav_items}>
+          <li className="gap-3 font-semibold">
             <Link href="/resources">Resources</Link>
           </li>
-          <li className={styles.nav_items}>
+          <li className="gap-3 font-semibold">
             <Link href="/pricing">Pricing</Link>
           </li>
         </ul>
 
-        <div className="">
-          <Button variant="outline" className="py-2 px-4 rounded-[26px]">
+        <div className="flex">
+          <Button variant="green"
+          className="py-2 px-4 rounded-[26px]  bg-gradient-to-r from-success to-success2">
             Signup
           </Button>
           <Button variant="outline" className=" py-2 px-4 rounded-[26px]">
-            <Search />
+            <Search/>
           </Button>
+          
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
                 role="combobox"
                 aria-expanded={open}
-                className="w-[200px] justify-between rounded-[26px]"
+                className="w-[125px] justify-between rounded-[26px]"
               >
                 <Globe />
                 {value ? (
@@ -99,7 +101,7 @@ export default function Navbar() {
                     <span>Select framework...</span>
                   </>
                 )}
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[200px] p-0">
