@@ -42,15 +42,10 @@ export default function Navbar() {
       value: "fr",
       label: "Fr",
     },
-    {
-      value: "astro",
-      label: "Astro",
-    },
   ];
 
   return (
-    <nav className="container w-full mx-auto my-6 max-w-7xl">
-      <div className="flex flex-row items-center justify-around">
+    <nav className="container flex flex-row items-center justify-between w-full m-auto my-6 max-w-7xl">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -60,7 +55,7 @@ export default function Navbar() {
             height="46"
           />
         </Link>
-        <div className="flex flex-row flex-wrap gap-3 ">
+        <div className="flex flex-row flex-wrap gap-3 md:hidden lg:flex sm:hidden">
           <Link href="/products" className="gap-3 font-semibold">
             Products
           </Link>
@@ -108,8 +103,8 @@ export default function Navbar() {
             </PopoverTrigger>
             <PopoverContent className="w-[200px] p-0">
               <Command>
-                <CommandInput placeholder="Search framework..." />
-                <CommandEmpty>No framework found.</CommandEmpty>
+                {/* <CommandInput placeholder="Search framework..." />
+                <CommandEmpty>No framework found.</CommandEmpty> */}
                 <CommandGroup>
                   {frameworks.map((framework) => (
                     <CommandItem
@@ -135,7 +130,6 @@ export default function Navbar() {
             </PopoverContent>
           </Popover>
         </div>
-      </div>
     </nav>
   );
 }
