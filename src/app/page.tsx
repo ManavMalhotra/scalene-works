@@ -4,15 +4,17 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import supportAgent from "../../public/support-agent.svg";
 
+
+
 export default function Home() {
   return (
-    <main className="flex flex-row items-center justify-between gap-3 p-24 sm:flex-wrap ">
+    <main className="flex flex-row items-center gap-16 p-24 sm:flex-wrap ">
       
-      <div className="max-w-4xl px-10 py-12">
-        <h3 className="mb-10 text-3xl font-medium opacity-50 ">
+      <div className="max-w-3xl px-10 py-12">
+        <h3 className="mb-10 text-2xl font-medium opacity-50 ">
           #because Scalene Works
         </h3>
-        <h1 className="mb-8 font-bold text-7xl">
+        <h1 className="mb-8 text-5xl font-bold">
           Bridging a million distant dream.
         </h1>
 
@@ -37,28 +39,28 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-[30rem] h-auto flex rounded-2xl px-11 gap-4 py-9 border flex-col items-center bg-slate-50">
-        <h4 className="text-4xl font-bold text-fuchsia-600">
+      <div className="flex flex-col items-center h-auto max-w-xs gap-4 border rounded-2xl px-11 py-9 bg-slate-50">
+        <h4 className="text-2xl font-bold text-fuchsia-600">
           A million dreams to reality.
         </h4>
 
         <div className="flex flex-row gap-3">
-          <div className="text-white bg-black h-11 w-11 text-[2rem] text-center">
+          <div className="text-white bg-black h-9 w-9 text-[1.5rem] text-center">
             0
           </div>
-          <div className="text-white bg-black h-11 w-11 text-[2rem] text-center">
+          <div className="text-white bg-black h-9 w-9 text-[1.5rem] text-center">
             0
           </div>
-          <div className="text-white bg-black h-11 w-11 text-[2rem] text-center">
+          <div className="text-white bg-black h-9 w-9 text-[1.5rem] text-center">
             6
           </div>
-          <div className="text-white bg-black h-11 w-11 text-[2rem] text-center">
+          <div className="text-white bg-black h-9 w-9 text-[1.5rem] text-center">
             8
           </div>
-          <div className="text-white bg-black h-11 w-11 text-[2rem] text-center">
+          <div className="text-white bg-black h-9 w-9 text-[1.5rem] text-center">
             0
           </div>
-          <div className="text-white bg-black h-11 w-11 text-[2rem] text-center">
+          <div className="text-white bg-black h-9 w-9 text-[1.5rem] text-center">
             0
           </div>
         </div>
@@ -72,17 +74,17 @@ export default function Home() {
           connect job seekers to job providers seemlessly.
         </p>
 
-        <Button className="text-xl text-white rounded-3xl bg-fuchsia-600">
+        <Button className="mt-16 text-xl text-white rounded-3xl bg-fuchsia-600">
           <Link href="/signup">Join This Mission</Link>
         </Button>
       </div>
-      <div className="absolute top-0 right-0 z-[-1]">
+      <div className="absolute top-0 right-8 z-[-1]">
         <Image
           src="/hero.svg"
           alt="hero design"
           className=""
-          width="800"
-          height="500"
+          width="680"
+          height="590"
         />
       </div>
     </main>

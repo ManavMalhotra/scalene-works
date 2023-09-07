@@ -45,7 +45,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="container flex flex-row items-center justify-between w-full m-auto my-6 max-w-7xl">
+    <nav className="flex flex-row items-center justify-around w-full m-auto my-6">
+      <div className="flex flex-row items-center gap-32">
         <Link href="/">
           <Image
             src="/logo.svg"
@@ -55,7 +56,8 @@ export default function Navbar() {
             height="46"
           />
         </Link>
-        <div className="flex flex-row flex-wrap gap-3 md:hidden lg:flex sm:hidden">
+
+        <div className="flex flex-row flex-wrap gap-6 md:hidden lg:flex sm:hidden">
           <Link href="/products" className="gap-3 font-semibold">
             Products
           </Link>
@@ -69,67 +71,65 @@ export default function Navbar() {
             Pricing
           </Link>
         </div>
+      </div>
 
-        <div className="flex flex-wrap gap-3">
-          <Button
-            variant="green"
-            className="py-2 px-4 rounded-[26px]  bg-gradient-to-r from-success to-success2"
-          >
-            Signup
-          </Button>
-          <Button variant="outline" className=" py-2 px-4 rounded-[26px]">
-            <Search />
-          </Button>
+      <div className="flex flex-wrap gap-3">
+        <Button
+          variant="green"
+          className="py-2 px-4 rounded-[26px]  bg-gradient-to-r from-success to-success2"
+        >
+          Signup
+        </Button>
+        <Button variant="outline" className=" py-2 px-4 rounded-[26px]">
+          <Search />
+        </Button>
 
-          <Popover open={open} onOpenChange={setOpen}>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                role="combobox"
-                aria-expanded={open}
-                className="w-[125px] justify-between rounded-[26px]"
-              >
-                <Globe />
-                {value ? (
-                  frameworks.find((framework) => framework.value === value)
-                    ?.label
-                ) : (
-                  <>
-                    <span>Select framework...</span>
-                  </>
-                )}
-                <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-[200px] p-0">
-              <Command>
-                {/* <CommandInput placeholder="Search framework..." />
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              role="combobox"
+              aria-expanded={open}
+              className="w-[125px] justify-between rounded-[26px]"
+            >
+              <Globe />
+              {value ? (
+                frameworks.find((framework) => framework.value === value)?.label
+              ) : (
+                <>
+                  <span>Select framework...</span>
+                </>
+              )}
+              <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-[200px] p-0">
+            <Command>
+              {/* <CommandInput placeholder="Search framework..." />
                 <CommandEmpty>No framework found.</CommandEmpty> */}
-                <CommandGroup>
-                  {frameworks.map((framework) => (
-                    <CommandItem
-                      key={framework.value}
-                      onSelect={(currentValue: any) => {
-                        setValue(currentValue === value ? "" : currentValue);
-                        setOpen(false);
-                      }}
-                    >
-                      <Check
-                        className={cn(
-                          "mr-2 h-4 w-4",
-                          value === framework.value
-                            ? "opacity-100"
-                            : "opacity-0"
-                        )}
-                      />
-                      {framework.label}
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </Command>
-            </PopoverContent>
-          </Popover>
-        </div>
+              <CommandGroup>
+                {frameworks.map((framework) => (
+                  <CommandItem
+                    key={framework.value}
+                    onSelect={(currentValue: any) => {
+                      setValue(currentValue === value ? "" : currentValue);
+                      setOpen(false);
+                    }}
+                  >
+                    <Check
+                      className={cn(
+                        "mr-2 h-4 w-4",
+                        value === framework.value ? "opacity-100" : "opacity-0"
+                      )}
+                    />
+                    {framework.label}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </Command>
+          </PopoverContent>
+        </Popover>
+      </div>
     </nav>
   );
 }
