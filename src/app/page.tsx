@@ -1,15 +1,38 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import supportAgent from "../../public/support-agent.svg";
 
+import accenture from "../../public/accenture.png";
+import capegami from "../../public/capegami.png";
+import genericElectric from "../../public/generalElectric.png";
+import kpmg from "../../public/kpmg.png";
+
 export default function Home() {
-  const styles = {
-    "text-gradient": {
-      background: "linear-gradient(93deg, #9747FF 5.96%, #FF008E 91.22%)",
-      "-webkit-background-clip": "text",
-      "-webkit-text-fill-color": "transparent",
+  interface CompanyLogo {
+    [key: string]: {
+      src: StaticImageData;
+      alt: string;
+    };
+  }
+
+  const companyLogo: CompanyLogo = {
+    accenture: {
+      src: accenture,
+      alt: "accenture logo",
+    },
+    genericElectric: {
+      src: genericElectric,
+      alt: "genericElectric logo",
+    },
+    capegami: {
+      src: capegami,
+      alt: "capegami logo",
+    },
+    kpmg: {
+      src: kpmg,
+      alt: "kpmg logo",
     },
   };
   return (
@@ -103,6 +126,34 @@ export default function Home() {
           width="680"
           height="590"
         />
+      </div>
+
+      {/* COMPANY PARTNERS  */}
+
+      <div className="flex flex-row items-center gap-20 border rounded-xl px-11 py-11">
+        <div className="flex flex-col items-center">
+          <h3 className="mb-10 text-3xl font-medium opacity-50 md:text-2xl sm:text-xl">
+            Trusted by MNC's globally
+          </h3>
+          <h6 className="flex flex-row text-lg text-indigo-900 align-middle">
+            Learn More <ChevronRight />
+          </h6>
+        </div>
+
+        <div className="flex flex-row gap-8">
+          {Object.keys(companyLogo).map((key) => (
+            <div
+              key={key}
+              className="relative flex items-center w-auto transition-transform h-52 transform-gpu hover:scale-110 hover:grayscale-0"
+            >
+              <Image
+                src={companyLogo[key].src}
+                alt={companyLogo[key].alt}
+                className="object-contain w-auto h-16 filter grayscale hover:grayscale-0 "
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
