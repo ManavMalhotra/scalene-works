@@ -75,11 +75,11 @@ export default function Navbar() {
 
       <div className="flex flex-wrap gap-3">
         <Button
-          variant="green"
-          className="py-2 px-4 rounded-[26px]  bg-gradient-to-r from-success to-success2"
+          className="py-2 px-4 rounded-[26px] bg-gradient-to-r from-green-500 to-green-600 backdrop-blur-20"
         >
           Signup
         </Button>
+
         <Button variant="outline" className=" py-2 px-4 rounded-[26px]">
           <Search />
         </Button>
