@@ -72,10 +72,10 @@ module.exports = {
       },
     },
     screens: {
-      'sm': '320px',
-      'md': '425px',
+      'xsm': '320px',
+      'sm': '480px',
+      'md': '768px',
       'lg': '1024px',
-
     },
   },
   plugins: [require("tailwindcss-animate")],
