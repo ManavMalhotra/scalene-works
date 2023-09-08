@@ -36,12 +36,15 @@ export default function herosection() {
     },
   };
   return (
-    <main className="flex flex-col gap-4 p-4 pb-0 md:p-24 md:flex-row xsm:flex-wrap xsm:flex-col xsm:items-center">
+    <main className="flex flex-col p-4 pb-0 md:p-24 md:flex-row xsm:flex-wrap xsm:flex-col xsm:items-center">
       <section className="self-start p-4 pb-16 md:max-w-3xl md:px-10 xsm:pb-4 lg:pb-12">
         <h3 className="mb-4 text-sm text-left opacity-50 md:text-lg md:text-left">
           #because Scalene Works
         </h3>
-        <h1 className="mb-4 text-3xl font-bold text-center text-transparent md:text-6xl xsm:text-2xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text">
+        <h1
+          className="mb-4 text-3xl font-bold text-center text-transparent md:text-6xl xsm:text-2xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text"
+          style={{ lineHeight: "1.3" }}
+        >
           Bridging a million distant dreams.
         </h1>
 
@@ -73,7 +76,7 @@ export default function herosection() {
         </div>
       </section>
 
-      <div className="w-[348px] h-[494px]">
+      <div className="w-[348px] h-[455px]">
         <section className="flex flex-col items-center max-w-full max-h-full gap-4 p-4 border rounded-2xl md:p-11 bg-slate-50">
           <h4 className="text-xl font-bold text-left md:text-2xl text-fuchsia-600">
             A million dreams to reality.
@@ -117,7 +120,8 @@ export default function herosection() {
           className="w-[747] h-[1007]"
         />
       </div>
-      <div className="flex flex-row items-center gap-20 border rounded-xl px-11 py-11">
+      {/* TRUSTED PARTNERS  */}
+      <div className="flex flex-row items-center gap-20 pt-0 pb-0 bg-white rounded-xl px-11 py-11">
         <div className="flex flex-col items-center">
           <h3 className="mb-10 text-3xl font-medium opacity-50 md:text-2xl sm:text-xl">
             Trusted by MNC&apos;s globally
