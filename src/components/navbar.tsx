@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./navbar.module.css"; // Import the CSS module
 import * as React from "react";
-import { Check, ChevronsUpDown, Globe, Search } from "lucide-react";
+import { Check, ChevronDown, Globe, Search } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -28,19 +28,19 @@ export default function Navbar() {
   const frameworks = [
     {
       value: "en",
-      label: "En",
+      label: "EN",
     },
     {
       value: "hn",
-      label: "Hn",
+      label: "HN",
     },
     {
       value: "cn",
-      label: "Cn",
+      label: "CN",
     },
     {
       value: "fr",
-      label: "Fr",
+      label: "FR",
     },
   ];
 
@@ -54,6 +54,7 @@ export default function Navbar() {
             className=""
             width="215"
             height="46"
+            priority={true}
           />
         </Link>
 
@@ -74,25 +75,40 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-wrap gap-3">
-        <Button
-          className="py-2 px-4 rounded-[26px] bg-gradient-to-r from-green-500 to-green-600 backdrop-blur-20"
-        >
+        <Button className="py-2 px-4 rounded-[26px] bg-gradient-to-r from-green-500 to-green-600 backdrop-blur-20">
           Signup
         </Button>
 
-        <Button variant="outline" className=" py-2 px-4 rounded-[26px]">
-          <Search />
+        <Button
+          variant="outline"
+          className="py-2 px-5 border-none rounded-[26px] bg-transparent drop-shadow-sm"
+          style={{
+            background: "rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+            color: "#fff",
+          }}
+        >
+          <Search className="w-6 h-auto" />
         </Button>
 
+        {/* LANGUAGE SELECTOR  */}
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <Button
-              variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-[125px] justify-between rounded-[26px]"
+              className="w-[100px] justify-between rounded-[26px]"
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                color: "#fff",
+              }}
             >
-              <Globe />
+              <Globe className="w-auto h-4" />
               {value ? (
                 frameworks.find((framework) => framework.value === value)?.label
               ) : (
@@ -100,11 +116,11 @@ export default function Navbar() {
                   <span>Select framework...</span>
                 </>
               )}
-              <ChevronsUpDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
+              <ChevronDown className="w-4 h-4 ml-2 opacity-50 shrink-0" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-[200px] p-0">
-            <Command>
+            <Command className="rounded-sm ">
               {/* <CommandInput placeholder="Search framework..." />
                 <CommandEmpty>No framework found.</CommandEmpty> */}
               <CommandGroup>
