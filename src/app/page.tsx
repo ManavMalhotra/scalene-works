@@ -133,11 +133,13 @@ export default function Home() {
       <div className="flex flex-row items-center gap-20 border rounded-xl px-11 py-11">
         <div className="flex flex-col items-center">
           <h3 className="mb-10 text-3xl font-medium opacity-50 md:text-2xl sm:text-xl">
-            Trusted by MNC's globally
+            Trusted by MNC&apos;s globally
           </h3>
-          <h6 className="flex flex-row text-lg text-indigo-900 align-middle">
-            Learn More <ChevronRight />
-          </h6>
+          <Link href="/learnmore">
+            <h6 className="flex flex-row text-lg text-indigo-900 align-middle">
+              Learn More <ChevronRight />
+            </h6>
+          </Link>
         </div>
 
         <div className="flex flex-row gap-8">
