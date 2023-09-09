@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import supportAgent from "../../public/support-agent.svg";
 
+import hero from "../../public/heroimg.svg";
 import accenture from "../../public/accenture.png";
 import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
@@ -82,7 +83,7 @@ export default function herosection() {
         {/* HERO IMAGE  */}
         <div className="top-0 right-8 md:block z-[-9]">
           <Image
-            src="/hero.svg"
+            src={hero}
             alt="hero design"
             width="680"
             height="592"
