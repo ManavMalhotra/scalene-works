@@ -36,48 +36,62 @@ export default function herosection() {
     },
   };
   return (
-    <main className="flex flex-col p-4 pb-0 md:p-24 md:flex-row xsm:flex-wrap xsm:flex-col xsm:items-center">
-      <section className="self-start p-4 pb-16 md:max-w-3xl md:px-10 xsm:pb-4 lg:pb-12">
-        <h3 className="mb-4 text-sm text-left opacity-50 md:text-lg md:text-left">
-          #because Scalene Works
-        </h3>
-        <h1
-          className="mb-4 text-3xl font-bold text-center text-transparent md:text-6xl xsm:text-2xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text"
-          style={{ lineHeight: "1.3" }}
-        >
-          Bridging a million distant dreams.
-        </h1>
+    <div className="flex flex-col items-center px-32">
+      <main className="flex flex-row ">
+        {/* SECTION TEXT */}
+        <section className="max-w-3xl p-4 pt-32">
+          <h3 className="mb-4 text-sm text-left opacity-50">
+            #because Scalene Works
+          </h3>
+          <h1
+            className="mb-4 text-3xl font-bold text-center text-transparent md:text-6xl xsm:text-2xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text"
+            style={{ lineHeight: "1.3" }}
+          >
+            Bridging a million distant dreams.
+          </h1>
 
-        <div className="flex flex-col items-center gap-4 md:flex-row">
-          <Link href="/contact">
-            <Button
-              variant="outline"
-              className="p-6 text-base md:text-xl let-700 rounded-3xl xsm:w-full md:w-auto"
-            >
-              <Image
-                src={supportAgent}
-                alt="support agent"
-                width="30"
-                height="30"
-                className="mr-2"
-              />
-              <span style={{ color: "#9747FF" }}>Contact Sales</span>
-            </Button>
-          </Link>
+          <div className="flex flex-col items-center gap-4 md:flex-row">
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="p-6 text-base md:text-xl let-700 rounded-3xl xsm:w-full md:w-auto"
+              >
+                <Image
+                  src={supportAgent}
+                  alt="support agent"
+                  width="30"
+                  height="30"
+                  className="mr-2"
+                />
+                <span style={{ color: "#9747FF" }}>Contact Sales</span>
+              </Button>
+            </Link>
 
-          <Link href="/recruit">
-            <Button
-              variant="outline"
-              className="p-6 text-base md:text-xl rounded-3xl xsm:w-full md:w-auto"
-              style={{ color: "#9747FF" }}
-            >
-              Recruit <ChevronRight />
-            </Button>
-          </Link>
+            <Link href="/recruit">
+              <Button
+                variant="outline"
+                className="p-6 text-base md:text-xl rounded-3xl xsm:w-full md:w-auto"
+                style={{ color: "#9747FF" }}
+              >
+                Recruit <ChevronRight />
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* HERO IMAGE  */}
+        <div className="top-0 right-8 md:block z-[-9]">
+          <Image
+            src="/hero.svg"
+            alt="hero design"
+            width="680"
+            height="592"
+            className="w-[680] h-[592]"
+          />
         </div>
-      </section>
 
-      <div className="w-[348px] h-[455px]">
+        {/* CARD CONTAINER  */}
+        {/* <div className="w-[348px] h-[455px]">
         <section className="flex flex-col items-center max-w-full max-h-full gap-4 p-4 border rounded-t-2xl md:p-11 bg-slate-50">
           <h4 className="text-3xl font-bold text-left md:text-3xl text-fuchsia-600">
             A million dreams to reality.
@@ -110,20 +124,13 @@ export default function herosection() {
             <Link href="/signup">Join This Mission</Link>
           </Button>
         </section>
-      </div>
+      </div> */}
+      </main>
 
-      <div className="absolute top-0 right-8 hidden md:block z-[-9]">
-        <Image
-          src="/hero.svg"
-          alt="hero design"
-          width="780"
-          height="590"
-          className="w-[747] h-[1007]"
-        />
-      </div>
+      {/* TRUSTED PARTNERS  */}
       {/* TRUSTED PARTNERS  */}
       <div
-        className="flex flex-row items-center gap-20 pt-0 pb-0 bg-white rounded-xl px-11 py-11"
+        className="flex flex-row items-center gap-20 "
         style={{
           border: "4px solid transparent",
           background:
@@ -143,7 +150,7 @@ export default function herosection() {
           </Link>
         </div>
 
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-row gap-8 px-6">
           {Object.keys(companyLogo).map((key) => (
             <div
               key={key}
@@ -158,6 +165,6 @@ export default function herosection() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }
