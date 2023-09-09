@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import supportAgent from "../../public/support-agent.svg";
 
-import hero from "../../public/heroimg.svg";
+import hero from "../../public/hero.svg";
 import accenture from "../../public/accenture.png";
 import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
