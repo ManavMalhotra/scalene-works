@@ -52,14 +52,14 @@ export default function herosection() {
           <Link href="/contact">
             <Button
               variant="outline"
-              className="text-base md:text-xl let-700 rounded-3xl xsm:w-full md:w-auto "
+              className="p-6 text-base md:text-xl let-700 rounded-3xl xsm:w-full md:w-auto"
             >
               <Image
                 src={supportAgent}
                 alt="support agent"
                 width="30"
                 height="30"
-                className="mr-2 fill-black"
+                className="mr-2"
               />
               <span style={{ color: "#9747FF" }}>Contact Sales</span>
             </Button>
@@ -68,7 +68,8 @@ export default function herosection() {
           <Link href="/recruit">
             <Button
               variant="outline"
-              className="text-base md:text-xl rounded-3xl xsm:w-full md:w-auto"
+              className="p-6 text-base md:text-xl rounded-3xl xsm:w-full md:w-auto"
+              style={{ color: "#9747FF" }}
             >
               Recruit <ChevronRight />
             </Button>
@@ -77,7 +78,7 @@ export default function herosection() {
       </section>
 
       <div className="w-[348px] h-[455px]">
-        <section className="flex flex-col items-center max-w-full max-h-full gap-4 p-4 border rounded-2xl md:p-11 bg-slate-50">
+        <section className="flex flex-col items-center max-w-full max-h-full gap-4 p-4 border rounded-t-2xl md:p-11 bg-slate-50">
           <h4 className="text-3xl font-bold text-left md:text-3xl text-fuchsia-600">
             A million dreams to reality.
           </h4>
@@ -121,7 +122,15 @@ export default function herosection() {
         />
       </div>
       {/* TRUSTED PARTNERS  */}
-      <div className="flex flex-row items-center gap-20 pt-0 pb-0 bg-white rounded-xl px-11 py-11">
+      <div
+        className="flex flex-row items-center gap-20 pt-0 pb-0 bg-white rounded-xl px-11 py-11"
+        style={{
+          border: "4px solid transparent",
+          background:
+            "linear-gradient(white, white) padding-box, linear-gradient(to right, white, darkorchid) border-box",
+          borderRadius: "1rem",
+        }}
+      >
         <div className="flex flex-col items-start text-left">
           <h3 className="mb-10 text-3xl font-medium opacity-50 md:text-3xl sm:text-xl">
             Trusted by MNC&apos;s globally
