@@ -98,7 +98,7 @@ export default function Footer1() {
               <AccordionItem value="item-2">
                 <AccordionTrigger>United Kingdoms</AccordionTrigger>
                 <AccordionContent>
-                  <h2>Bangalore</h2>
+                  <h2>United Kingdoms</h2>
                   <h5>
                     Scalene Works People Solution LLPVajram Esteva,
                     MarathahalliSarjapur Outer Ring

@@ -121,7 +121,13 @@ export default function herosection() {
         />
       </div>
       {/* TRUSTED PARTNERS  */}
-      <div className="flex flex-row items-center gap-20 pt-0 pb-0 bg-white rounded-xl px-11 py-11">
+      <div className="flex flex-row items-center gap-20 pt-0 pb-0 bg-white rounded-xl px-11 py-11"
+      style={{
+        border: "4px solid transparent",
+        background: "linear-gradient(white, white) padding-box, linear-gradient(to right, white, darkorchid) border-box",
+        borderRadius: "1rem",
+      }}
+      >
         <div className="flex flex-col items-start text-left">
           <h3 className="mb-10 text-3xl font-medium opacity-50 md:text-3xl sm:text-xl">
             Trusted by MNC&apos;s globally
