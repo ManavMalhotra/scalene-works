@@ -194,8 +194,15 @@ export default function Navbar() {
     </nav>
   );
 }
+interface LanguageSelectorProps {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const LanguageSelector = ({ open, setOpen }) => {
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({
+  open,
+  setOpen,
+}) => {
   const [value, setValue] = React.useState("en");
 
   return (
