@@ -64,7 +64,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between w-full h-full py-6 m-0 m-auto bg-white border-b-2 sm:px-6 md:px-8">
+    <nav className="flex items-center justify-between w-full h-full px-4 py-6 m-auto bg-white border-b-2 sm:px-6 md:px-8">
       <Link href="/">
         <Image
           src="/logo.svg"
@@ -118,7 +118,7 @@ export default function Navbar() {
         </Sheet>
       </div>
       <div
-        className={`gap-5 px-12 sm:hidden md:flex text-sm lg:text-base ${
+        className={`hidden gap-5 px-12 sm:hidden md:flex text-sm lg:text-base ${
           animation ? "animation-hidden" : "animation"
         }`}
       >
@@ -136,14 +136,14 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className={`flex-row items-center max-w-full sm:hidden md:flex`}>
+      <div className={`hidden flex-row items-center max-w-full sm:hidden md:flex`}>
         <div
           className={`flex-row items-center max-w-full sm:hidden md:flex ${
             animation ? "animation-hidden" : "animation"
           }`}
         >
           <Button
-            className="py-2 px-4 rounded-[26px] bg-gradient-to-r from-green-500 to-green-600 backdrop-blur-20"
+            className="  sm:block py-2 px-4 rounded-[26px] bg-gradient-to-r from-green-500 to-green-600 backdrop-blur-20"
             style={{
               background:
                 "linear-gradient(265deg, #0FFB00 -6.69%, #0D8C05 101.92%)",
