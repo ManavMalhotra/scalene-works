@@ -76,7 +76,6 @@ export default function Navbar() {
         />
       </Link>
 
-      <div className="sm:block md:hidden">
         <Sheet>
           <SheetTrigger>
             <Menu
@@ -92,7 +91,7 @@ export default function Navbar() {
           >
             <SheetHeader>
               <SheetDescription className="">
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 py-4">
                   <div className="flex items-center w-full max-w-sm space-x-2">
                     <Search className="w-4 h-4" />
                     <Input placeholder="Search..." className="w-full" />
@@ -116,7 +115,6 @@ export default function Navbar() {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-      </div>
       <div
         className={`hidden gap-5 px-12 sm:hidden md:flex text-sm lg:text-base ${
           animation ? "animation-hidden" : "animation"
