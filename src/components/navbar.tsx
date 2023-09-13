@@ -79,7 +79,7 @@ export default function Navbar() {
         <Sheet>
           <SheetTrigger>
             <Menu
-              className="w-8 h-8 text-purple-600"
+              className="w-8 h-8 text-purple-600 md:hidden"
               onClick={hangleToggleNavbar}
             />
           </SheetTrigger>
