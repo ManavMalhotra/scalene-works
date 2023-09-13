@@ -44,7 +44,7 @@ export default function Footer1() {
             height="46"
             className="h-20 w-60"
           />
-          <div className="flex flex-col items-start gap-2 m-0 md:space-x-12 md:mr-10 lg:flex-row md:items-center">
+          <div className="flex flex-col items-start gap-2 m-0 md:space-x-12 md:mr-10 md:flex-row md:items-center">
             {/* Contact Icons */}
             <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap">
               <Mail className="w-5 h-5" />
