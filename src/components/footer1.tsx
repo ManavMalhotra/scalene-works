@@ -33,43 +33,40 @@ import { Separator } from "./ui/separator";
 export default function Footer1() {
   return (
     <div className="bg-[#f7f7fe]">
-      <div className="container px-24 py-10 mx-auto">
+      <div className="container px-6 py-10 mx-auto">
         {/* Footer Top */}
-        <div className="border-b border-[#24255e80] pb-6">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-            {/* Logo */}
-            <Image
-              src={logo}
-              alt="logo"
-              width="215"
-              height="46"
-              className="h-20 w-60"
-            />
-            <div className="flex mr-10 space-x-12">
-              {/* Contact Icons */}
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <p className="text-lg font-normal text-black underline">
-                  <span className="font-bold">hello@</span>scaleneworks.com
-                </p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <p className="text-lg font-normal text-black underline">
-                  Request a call back
-                </p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <BsWhatsapp className="w-5 h-5" />
-                <p className="text-lg font-normal text-black underline">
-                  Whatsapp Us
-                </p>
-              </div>
+        <div className="flex flex-col gap-8 pb-6 lg:flex-row lg:items-center lg:justify-between">
+          {/* Logo */}
+          <Image
+            src={logo}
+            alt="logo"
+            width="215"
+            height="46"
+            className="h-20 w-60"
+          />
+          <div className="flex flex-col items-start gap-2 m-0 md:space-x-12 md:mr-10 lg:flex-row md:items-center">
+            {/* Contact Icons */}
+            <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap">
+              <Mail className="w-5 h-5" />
+              <p className="text-lg font-normal text-black ">
+                hello@scaleneworks.com
+              </p>
+            </div>
+            <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap ">
+              <Phone className="w-5 h-5" />
+              <p className="text-lg font-normal text-black">
+                Request a call back
+              </p>
+            </div>
+            <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap ">
+              <BsWhatsapp className="w-5 h-5" />
+              <p className="text-lg font-normal text-black">Whatsapp Us</p>
             </div>
           </div>
         </div>
+        <Separator />
         {/* Footer Middle */}
-        <div className="flex py-8 lg:flex lg:items-start lg:justify-between">
+        <div className="flex flex-col py-8 md:flex-row lg:flex lg:items-start lg:justify-between">
           <div className="w-full pr-0 lg:w-2/5 lg:pr-20">
             <p className="text-base leading-7 text-black">
               ScaleneWorks is a global talent solutions organization with over a
@@ -243,81 +240,27 @@ export default function Footer1() {
               </TableBody>
             </Table>
           </div>
-          {/* <div className="flex-1 mt-8 lg:mt-0 lg:w-1/2 ">
-            <div className="flex flex-col space-y-4">
-              <div className="flex flex-row space-x-3 text-left">
-                <h3>Products</h3>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Human Capital Management</h3>
-                  <h3>Payroll and Workflow management</h3>
-                </div>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Talent Acquisition</h3>
-                  <h3>Talent Management</h3>
-                </div>
-              </div>
-              <div className="flex flex-row space-x-3 text-left">
-                <h3>Modules</h3>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Recruit</h3>
-                  <h3>Onboarding</h3>
-                  <h3>Core HR</h3>
-                  <h3>Payroll</h3>
-                </div>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Human Capital Management</h3>
-                  <h3>Employee Verification</h3>
-                  <h3>Leave & Attendence</h3>
-                </div>
-              </div>
-              <div className="flex flex-row space-x-3 text-left">
-                <h3>Industries</h3>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Banking & Financial Services</h3>
-                  <h3>Healthcare</h3>
-                </div>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Human Capital Management</h3>
-                  <h3>Payroll and Workflow management</h3>
-                </div>
-              </div>
-              <div className="flex flex-row space-x-3 text-left">
-                <h3>Company</h3>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Human Capital Management</h3>
-                  <h3>Payroll and Workflow management</h3>
-                </div>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Talent Acquisition</h3>
-                  <h3>Talent Management</h3>
-                </div>
-              </div>
-              <div className="flex flex-row space-x-3 text-left">
-                <h3>Products</h3>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Human Capital Management</h3>
-                  <h3>Payroll and Workflow management</h3>
-                </div>
-                <div className="flex flex-col items-start space-y-2">
-                  <h3>Talent Acquisition</h3>
-                  <h3>Talent Management</h3>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <Separator />
         {/* Footer Bottom */}
-        <div className="flex flex-col py-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col items-center py-4 lg:flex-row lg:items-center lg:justify-between">
           <p className="text-sm font-normal lg:w-2/3">
             © 2023 Scalene Works, All rights reserved
           </p>
-          <div className="flex w-full mt-4 space-x-8 lg:mt-0">
-            <div className="text-sm font-normal">Brand</div>
-            <div className="text-sm font-normal">Customer Support</div>
-            <div className="text-sm font-normal">Cookie Policy</div>
-            <div className="text-sm font-normal">Privacy & GDPR Policy</div>
-            <div className="text-sm font-normal">Security Resources</div>
+          <div className="flex flex-wrap items-stretch max-w-full mt-4 space-x-8 lg:justify-center lg:mt-0 lg:flex-nowrap">
+            <div className="text-sm font-normal whitespace-nowrap">Brand</div>
+            <div className="text-sm font-normal whitespace-nowrap">
+              Customer Support
+            </div>
+            <div className="text-sm font-normal whitespace-nowrap">
+              Cookie Policy
+            </div>
+            <div className="text-sm font-normal whitespace-nowrap">
+              Privacy & GDPR Policy
+            </div>
+            <div className="text-sm font-normal whitespace-nowrap">
+              Security Resources
+            </div>
           </div>
         </div>
       </div>
