@@ -1,3 +1,4 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,18 @@ import accenture from "../../public/accenture.png";
 import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
 import kpmg from "../../public/kpmg.png";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
+import { Separator } from "./ui/separator";
+import cert from "../../public/certificate.svg";
 export default function herosection() {
   interface CompanyLogo {
     [key: string]: {
@@ -129,6 +141,100 @@ export default function herosection() {
               />
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* STATS  */}
+
+      <div className="container px-10 my-8 py-14">
+        <h1 className="text-3xl md:text-5xl">
+          A cutting-edge talent solutions organisation with
+          <span className="text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
+            {" "}
+            10+ years of experience{" "}
+          </span>
+          , global reach, and a team of seasoned experts, ready to empower the
+          next gen.
+        </h1>
+        <div className="flex flex-col flex-wrap items-start justify-center w-full gap-2 pt-8 mx-auto md:flex-row md:gap-20 md:flex-nowrap">
+          <div className="w-[180px] max-w-[200px] flex flex-col gap-2">
+            <Separator className="bg-[#252424] md:block" />
+            <h3 className="font-bold">6,800+</h3>
+            <p className="text-gray-600">
+              Diverse talented individuals with a global presence
+            </p>
+          </div>
+          <div className="w-[180px] flex flex-col gap-2">
+            <Separator className="bg-[#252424] md:block" />
+            <h3 className="font-bold">8+</h3>
+            <p>Global presence in India, USA, UK, and Poland</p>
+          </div>
+          <div className="w-[180px] flex flex-col gap-2">
+            <Separator className="bg-[#252424] md:block" />
+            <h3 className="font-bold">8+</h3>
+            <p>Healthcare, IT and BFSI industry</p>
+          </div>
+
+          <div className="w-[180px] flex flex-col gap-2">
+            <Separator className="bg-[#252424] md:block" />
+            <h3 className="font-bold">200+</h3>
+            <p>Years of combined experience in talent management</p>
+          </div>
+        </div>
+        {/* Annual Report  */}
+        <div className="bg-[#FF008E] w-full rounded-lg container mt-4">
+          <div className="flex flex-col-reverse gap-6 px-10 py-8 md:flex-row">
+            <div className="flex flex-col gap-4 text-white">
+              <p>Annual report</p>
+              <h2 className="text-xl md:text-3xl ">
+                Experience the Scalene difference -
+              </h2>
+              <Button>
+                Global Hiring Index 2022
+                <ChevronRight />
+              </Button>
+            </div>
+            <div>
+              <Image src={cert} width="524" height="295" alt="certificate" />
+            </div>
+          </div>
+        </div>
+        {/* Mission  */}
+        <div className="">
+          <h3 className="text-sm font-bold">Mission</h3>
+          <div className="flex ">
+            <div>
+              <h2 className="text-3xl md:text-5xl">Empowering Individuals</h2>
+              <p>
+                A cutting-edge talent solutions organization with a 10+ years of
+                experience, global reach, and a team of seasoned experts, ready
+                to empower the next generation.
+              </p>
+              <div className="flex flex-row ">
+                <Link href="/about">
+                  Learn More <ChevronRight />
+                </Link>
+              </div>
+            </div>
+            <div>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Mission</TableCell>
+                    <TableCell>People</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Exports</TableCell>
+                    <TableCell>Partners</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Clients</TableCell>
+                    <TableCell>Stories</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
