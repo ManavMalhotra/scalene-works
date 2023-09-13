@@ -37,21 +37,21 @@ export default function herosection() {
     },
   };
   return (
-    <div className="flex flex-col items-center px-32">
-      <main className="flex flex-row ">
+    <div className="flex flex-col px-6">
+      <main className="flex flex-col items-center w-full mx-auto md:justify-center md:flex-row">
         {/* SECTION TEXT */}
-        <section className="max-w-3xl p-4 pt-32">
-          <h3 className="mb-4 text-sm text-left opacity-50">
+        <section className="items-start max-w-3xl p-4 pt-8 md:pt-32">
+          <h3 className="mb-4 text-sm text-left opacity-50 md:text-lg">
             #because Scalene Works
           </h3>
           <h1
-            className="mb-4 text-3xl font-bold text-center text-transparent md:text-6xl xsm:text-2xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text"
+            className="mb-4 text-3xl font-bold text-left text-transparent md:text-5xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text"
             style={{ lineHeight: "1.3" }}
           >
             Bridging a million distant dreams.
           </h1>
 
-          <div className="flex flex-col items-center gap-4 md:flex-row">
+          <div className="flex flex-row items-center w-full max-w-6xl gap-4 md:flex-row">
             <Link href="/contact">
               <Button
                 variant="outline"
@@ -63,6 +63,7 @@ export default function herosection() {
                   width="30"
                   height="30"
                   className="mr-2"
+                  priority={true}
                 />
                 <span style={{ color: "#9747FF" }}>Contact Sales</span>
               </Button>
@@ -81,57 +82,21 @@ export default function herosection() {
         </section>
 
         {/* HERO IMAGE  */}
-        <div className="top-0 right-8 md:block z-[-9]">
+        <div className="max-w-lg">
           <Image
             src={hero}
             alt="hero design"
             width="680"
             height="592"
-            className="w-[680] h-[592]"
+            className="object-contain min-w-[10] w-96 md:w-[680px]"
           />
+          {/* w-[680] h-[592] */}
         </div>
-
-        {/* CARD CONTAINER  */}
-        {/* <div className="w-[348px] h-[455px]">
-        <section className="flex flex-col items-center max-w-full max-h-full gap-4 p-4 border rounded-t-2xl md:p-11 bg-slate-50">
-          <h4 className="text-3xl font-bold text-left md:text-3xl text-fuchsia-600">
-            A million dreams to reality.
-          </h4>
-
-          <div className="flex flex-row justify-center gap-2 md:justify-start">
-            {Array.from({ length: 7 }, (_, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center w-6 h-6 p-1 text-sm text-center text-white bg-black md:w-8 md:h-8 md:text-xl"
-              >
-                {index === 3 ? 6 : 0}
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href="/learnmore"
-            className="mx-2 my-2 text-sm text-center md:text-xs text-fuchsia-600"
-          >
-            Learn more
-          </Link>
-
-          <p className="text-sm font-normal text-left md:text-base lg:text-base">
-            Scalene Works is on a mission to help bridge a million dreams and
-            connect job seekers to job providers seamlessly.
-          </p>
-
-          <Button className="mt-4 mb-4 text-base text-white md:mt-4 md:text-xl rounded-3xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-500 backdrop-blur-40">
-            <Link href="/signup">Join This Mission</Link>
-          </Button>
-        </section>
-      </div> */}
       </main>
 
       {/* TRUSTED PARTNERS  */}
-      {/* TRUSTED PARTNERS  */}
       <div
-        className="flex flex-row items-center gap-20 "
+        className="flex flex-col items-center gap-4 mx-auto md:gap-20 md:flex-row md:p-8"
         style={{
           border: "4px solid transparent",
           background:
@@ -139,28 +104,28 @@ export default function herosection() {
           borderRadius: "1rem",
         }}
       >
-        <div className="flex flex-col items-start text-left">
-          <h3 className="mb-10 text-3xl font-medium opacity-50 md:text-3xl sm:text-xl">
+        <div className="flex flex-col items-start max-w-screen-md text-left min-w-max">
+          <h3 className="mb-4 text-base font-medium opacity-50 md:mb-10 md:text-3xl">
             Trusted by MNC&apos;s globally
           </h3>
           <Link href="/learnmore">
-            <div className="flex flex-row items-center justify-between gap-4 align-middle ">
-              <h6 className="text-lg text-indigo-900 ">Learn More</h6>
+            <div className="flex items-center justify-between w-full gap-4 align-middle">
+              <h6 className="text-base text-indigo-900 ">Learn More</h6>
               <ArrowRight className="text-indigo-900" />
             </div>
           </Link>
         </div>
 
-        <div className="flex flex-row gap-8 px-6">
+        <div className="flex flex-col items-center px-6 md:flex-row md:gap-8">
           {Object.keys(companyLogo).map((key) => (
             <div
               key={key}
-              className="relative flex items-center w-auto transition-transform h-52 transform-gpu hover:scale-110 hover:grayscale-0"
+              className="flex items-center max-w-sm transition-transform transform-gpu hover:scale-110 hover:grayscale-0 "
             >
               <Image
                 src={companyLogo[key].src}
                 alt={companyLogo[key].alt}
-                className="object-contain w-auto h-16 filter grayscale hover:grayscale-0 "
+                className="object-contain min-w-[10] filter h-7 md:h-16 grayscale hover:grayscale-0 "
               />
             </div>
           ))}
