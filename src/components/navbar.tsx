@@ -167,14 +167,14 @@ export default function Navbar() {
           <Input
             placeholder="Search..."
             className={`${
-              animation ? "block animation" : "hidden animation-hidden"
+              animation ? " animation " : " hidden animation-hidden"
             }`}
           />
         </div>
         <Button
           variant="outline"
           className={`py-2 px-5 border-s-muted rounded-[26px] bg-transparent text-black ${
-            animation ? "block animation" : "hidden animation-hidden"
+            animation ? "animation" : "hidden animation-hidden"
           }`}
           onClick={handleAnimation}
           style={{

@@ -33,9 +33,9 @@ import { Separator } from "./ui/separator";
 export default function Footer1() {
   return (
     <div className="bg-[#f7f7fe]">
-      <div className="container px-6 py-10 mx-auto">
+      <div className="py-8 mx-auto px-44">
         {/* Footer Top */}
-        <div className="flex flex-col gap-8 pb-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-20 pb-6 lg:flex-row lg:items-center lg:justify-between">
           {/* Logo */}
           <Image
             src={logo}
@@ -48,19 +48,19 @@ export default function Footer1() {
             {/* Contact Icons */}
             <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap">
               <Mail className="w-5 h-5" />
-              <p className="text-lg font-normal text-black ">
+              <p className="text-base font-normal text-black ">
                 hello@scaleneworks.com
               </p>
             </div>
             <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap ">
               <Phone className="w-5 h-5" />
-              <p className="text-lg font-normal text-black">
+              <p className="text-base font-normal text-black">
                 Request a call back
               </p>
             </div>
             <div className="flex items-center gap-2 lg:space-x-1 whitespace-nowrap ">
               <BsWhatsapp className="w-5 h-5" />
-              <p className="text-lg font-normal text-black">Whatsapp Us</p>
+              <p className="text-base font-normal text-black">Whatsapp Us</p>
             </div>
           </div>
         </div>
@@ -82,21 +82,21 @@ export default function Footer1() {
               <BsLinkedin className="w-6 h-6 text-[#5557DF]" />
               <BsYoutube className="w-6 h-6 text-[#5557DF]" />
             </div>
-            {/* Address Sections */}
 
+            {/* Address Sections */}
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>India</AccordionTrigger>
                 <AccordionContent>
-                  <h2>Bangalore</h2>
-                  <h5>
+                  <h2 className="text-[#505050], font-bold">Bangalore</h2>
+                  <h5 className="text-[#AAA]">
                     Scalene Works People Solution LLP#306, 100 feet Road,
                     BinnamangalaStage 1, IndiranagarBengaluru, Karnataka 560038
                   </h5>
                 </AccordionContent>
                 <AccordionContent>
-                  <h2>Hyderabad</h2>
-                  <h5>
+                  <h2 className="text-[#505050], font-bold">Hyderabad</h2>
+                  <h5 className="text-[#AAA]">
                     Scalene Works People Solution LLPVajram Esteva,
                     MarathahalliSarjapur Outer Ring
                     Road,Devarabisanahalli,Bellandur, Bengaluru, Karnataka
@@ -107,8 +107,8 @@ export default function Footer1() {
               <AccordionItem value="item-2">
                 <AccordionTrigger>United Kingdoms</AccordionTrigger>
                 <AccordionContent>
-                  <h2>United Kingdoms</h2>
-                  <h5>
+                  <h2 className="text-[#505050], font-bold">United Kingdoms</h2>
+                  <h5 className="text-[#AAA]">
                     Scalene Works People Solution LLPVajram Esteva,
                     MarathahalliSarjapur Outer Ring
                     Road,Devarabisanahalli,Bellandur, Bengaluru, Karnataka
@@ -119,8 +119,8 @@ export default function Footer1() {
               <AccordionItem value="item-3">
                 <AccordionTrigger>Poland</AccordionTrigger>
                 <AccordionContent>
-                  <h2>Poland</h2>
-                  <h5>
+                  <h2 className="text-[#505050], font-bold">Poland</h2>
+                  <h5 className="text-[#AAA]">
                     Scalene Works People Solution LLPVajram Esteva,
                     MarathahalliSarjapur Outer Ring
                     Road,Devarabisanahalli,Bellandur, Bengaluru, Karnataka
@@ -131,8 +131,8 @@ export default function Footer1() {
               <AccordionItem value="item-4">
                 <AccordionTrigger>Europe</AccordionTrigger>
                 <AccordionContent>
-                  <h2>Europe</h2>
-                  <h5>
+                  <h2 className="text-[#505050], font-bold">Europe</h2>
+                  <h5 className="text-[#AAA]">
                     Scalene Works People Solution LLPVajram Esteva,
                     MarathahalliSarjapur Outer Ring
                     Road,Devarabisanahalli,Bellandur, Bengaluru, Karnataka
@@ -142,13 +142,14 @@ export default function Footer1() {
               </AccordionItem>
             </Accordion>
           </div>
-          <div className="flex-1 mt-8 lg:mt-0 lg:w-3/5">
+          <div className="flex-1 h-full mt-8 lg:mt-0 lg:w-3/5">
             <Table>
               <TableBody>
                 {/* ITEM #1 */}
                 <TableRow
                   style={{
                     borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell rowSpan={2} style={{ verticalAlign: "top" }}>
@@ -159,16 +160,19 @@ export default function Footer1() {
                 </TableRow>
                 <TableRow
                   style={{
-                    borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell>Talent Acquisition</TableCell>
                   <TableCell>Talent Management</TableCell>
                 </TableRow>
+                <Separator />
                 {/* ITEM #2 */}
                 <TableRow
                   style={{
                     borderBottom: "none",
+
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell rowSpan={3} style={{ verticalAlign: "top" }}>
@@ -180,6 +184,7 @@ export default function Footer1() {
                 <TableRow
                   style={{
                     borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell>Core HR</TableCell>
@@ -187,7 +192,7 @@ export default function Footer1() {
                 </TableRow>
                 <TableRow
                   style={{
-                    borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell>Human Capital Management</TableCell>
@@ -196,7 +201,7 @@ export default function Footer1() {
                 {/* ITEM #3 */}
                 <TableRow
                   style={{
-                    borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell style={{ verticalAlign: "top" }}>
@@ -209,6 +214,7 @@ export default function Footer1() {
                 <TableRow
                   style={{
                     borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell rowSpan={2} style={{ verticalAlign: "top" }}>
@@ -219,7 +225,7 @@ export default function Footer1() {
                 </TableRow>
                 <TableRow
                   style={{
-                    borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell>Talent Acquisition</TableCell>
@@ -229,6 +235,7 @@ export default function Footer1() {
                 <TableRow
                   style={{
                     borderBottom: "none",
+                    paddingBottom: "22px",
                   }}
                 >
                   <TableCell rowSpan={2} style={{ verticalAlign: "top" }}>
@@ -236,7 +243,17 @@ export default function Footer1() {
                   </TableCell>
                   <TableCell>Human Capital Management</TableCell>
                   <TableCell>Payroll and Workflow management</TableCell>
+                  
                 </TableRow>
+                <TableRow
+                  style={{
+                    paddingBottom: "22px",
+                  }}
+                >
+                  <TableCell>Talent Acquisition</TableCell>
+                  <TableCell>Talent Management</TableCell>
+                </TableRow>
+
               </TableBody>
             </Table>
           </div>
