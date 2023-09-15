@@ -8,11 +8,10 @@
 }
 
 .animation-hidden {
-  opacity: 0;
+  display: none;
   -webkit-animation: fadeInBottom 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
   animation: fadeInBottom 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
 }
-
 
 @keyframes fadeInBottom {
   0% {
