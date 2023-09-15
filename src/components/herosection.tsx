@@ -10,6 +10,7 @@ import accenture from "../../public/accenture.png";
 import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
 import kpmg from "../../public/kpmg.png";
+import casestudies from "../../public/casestudies.svg";
 import {
   Table,
   TableBody,
@@ -23,6 +24,13 @@ import mission from "../../public/mission.svg";
 
 import { Separator } from "./ui/separator";
 import cert from "../../public/certificate.svg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 export default function herosection() {
   interface CompanyLogo {
     [key: string]: {
@@ -278,6 +286,208 @@ export default function herosection() {
           </div>
         </div>
       </div>
+      {/* INDUSTRIES */}
+      <div className="container flex flex-col gap-4 my-16">
+        <h3 className="text-sm font-bold text-[#FF008E]">INDUSTRIES</h3>
+        <h2 className="text-3xl md:text-4xl">
+          We got you covered in every industry.
+        </h2>
+        <p>
+          Worried about hiring with specific skills and experience ? We cover a
+          wide range of industries & Companies
+        </p>
+        <Link href="/learnmore">
+          <div className="flex items-center gap-4 align-middle">
+            <h6 className="text-base text-indigo-900 ">Learn More</h6>
+            <ArrowRight className="text-indigo-900" />
+          </div>
+        </Link>
+        <div className="grid w-full grid-cols-1 gap-16 lg:grid-cols-3">
+          {/* #1 */}
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem
+              value="item-1"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Aviation & Transportation</AccordionTrigger>
+              <AccordionContent>Aviation & Transportation </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-2"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Automotive</AccordionTrigger>
+              <AccordionContent>Automotive </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-3"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Consumer Products</AccordionTrigger>
+              <AccordionContent>Consumer Products </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-4"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Energy & Natural Resources</AccordionTrigger>
+              <AccordionContent>Energy & Natural Resources </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-5"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Financial Services</AccordionTrigger>
+              <AccordionContent>Financial Services </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          {/* #2  */}
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem
+              value="item-1"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Healthcare</AccordionTrigger>
+              <AccordionContent>Healthcare </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-2"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Information Technology</AccordionTrigger>
+              <AccordionContent>Information Technology </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-3"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Infrastructure</AccordionTrigger>
+              <AccordionContent>Infrastructure </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-4"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Life Sciences</AccordionTrigger>
+              <AccordionContent>Life Sciences </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-5"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Manufacturing</AccordionTrigger>
+              <AccordionContent>Manufacturing </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          {/* #3  */}
+
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem
+              value="item-1"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Professional Services</AccordionTrigger>
+              <AccordionContent>Professional Services </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-2"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Real Estate</AccordionTrigger>
+              <AccordionContent>Real Estate </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-3"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Software & Platforms</AccordionTrigger>
+              <AccordionContent>Software & Platforms </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-4"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Sports</AccordionTrigger>
+              <AccordionContent>Sports </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value="item-5"
+              className="hover:bg-[#7779E5] hover:text-white px-1"
+            >
+              <AccordionTrigger>Telecommunications</AccordionTrigger>
+              <AccordionContent>Telecommunications </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </div>
+      {/* CASE STUDIES */}
+      <section className="flex flex-col gap-4 m-auto mx-6 my-16 md:container md:mx-auto">
+        <h3 className="text-sm font-bold text-[#FF008E]">CASE STUDIES</h3>
+        <h2 className="text-3xl md:text-4xl">Bring agility </h2>
+        <p>
+          Worried about hiring with specific skills and experience ? We cover a
+          wide range of industries & Companies
+        </p>
+        <Link href="/learnmore">
+          <div className="flex items-center gap-4 align-middle">
+            <h6 className="text-base text-indigo-900 ">Learn More</h6>
+            <ArrowRight className="text-indigo-900" />
+          </div>
+        </Link>
+        <div className="flex flex-col-reverse w-full gap-4 pt-8 justify-evenly lg:flex-row">
+          <div className="grid grid-cols-3 gap-8 lg:flex lg:flex-col md:w-1/5">
+            <div>
+              <h3 className="text-2xl font-medium ">130</h3>
+              <p className="text-sm font-medium">
+                HR Analytics ScaleneWorks Behavioral Modeling to Predict Renege
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-medium ">130</h3>
+              <p className="text-sm font-medium">
+                HR Analytics ScaleneWorks Behavioral Modeling to Predict Renege
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-medium ">130</h3>
+              <p className="text-sm font-medium">
+                HR Analytics ScaleneWorks Behavioral Modeling to Predict Renege
+              </p>
+            </div>
+          </div>
+          <div className="w-full">
+            <Image
+              src={casestudies}
+              width="1012"
+              height="478"
+              alt="case studies"
+              className="max-w-[800px] w-[300px] lg:w-[800px] min-w-[400px]"
+            />
+          </div>
+        </div>
+        <Separator />
+        <div className="flex flex-row items-center gap-2 pt-4 md:px-6 justify-evenly md:gap-16">
+          {Object.keys(companyLogo).map((key) =>
+            companyLogo[key].src === accenture ? (
+              <div key={key} className="flex items-center mr-8 scale-110">
+                <Image
+                  src={companyLogo[key].src}
+                  alt={companyLogo[key].alt}
+                  className="object-contain min-w-[10px] filter h-10 md:h-16 hover:grayscale-0"
+                />
+              </div>
+            ) : (
+              <div key={key} className="flex items-center">
+                <Image
+                  src={companyLogo[key].src}
+                  alt={companyLogo[key].alt}
+                  className="object-contain min-w-[10]  h-10 md:h-16 grayscale  "
+                />
+              </div>
+            )
+          )}
+        </div>
+      </section>
     </div>
   );
 }

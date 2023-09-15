@@ -33,9 +33,9 @@ import { Separator } from "./ui/separator";
 export default function Footer1() {
   return (
     <div className="bg-[#f7f7fe]">
-      <div className="py-8 mx-auto px-44">
+      <div className="px-8 py-8 mx-auto md:px-44">
         {/* Footer Top */}
-        <div className="flex flex-col gap-20 pb-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-5 pb-6 md:gap-20 lg:flex-row lg:items-center lg:justify-between">
           {/* Logo */}
           <Image
             src={logo}
