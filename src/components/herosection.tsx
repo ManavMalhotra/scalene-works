@@ -11,6 +11,7 @@ import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
 import kpmg from "../../public/kpmg.png";
 import casestudies from "../../public/casestudies.svg";
+import resources from "../../public/resources.svg";
 import {
   Table,
   TableBody,
@@ -20,6 +21,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import mission from "../../public/mission.svg";
 
 import { Separator } from "./ui/separator";
@@ -487,6 +490,91 @@ export default function herosection() {
             )
           )}
         </div>
+      </section>
+      {/* Resources/ Insights  */}
+      <section className="flex flex-col gap-4 m-auto mx-6 my-16 md:container md:mx-auto">
+        <h3 className="text-sm font-bold text-[#FF008E]">
+          Resources / Insights
+        </h3>
+        <h2 className="text-3xl font-medium md:text-4xl">
+          Expert insights shaping the future, empowering the next generation.
+        </h2>
+        <Tabs defaultValue="Productivity" className="w-[400px]">
+          <TabsList>
+            <TabsTrigger value="Leadership">Leadership</TabsTrigger>
+            <TabsTrigger value="Productivity">Productivity</TabsTrigger>
+            <TabsTrigger value="Technologies">Technologies</TabsTrigger>
+            <TabsTrigger value="Management">Management</TabsTrigger>
+          </TabsList>
+          <TabsContent value="Productivity">
+            <div className="flex flex-col gap-5 lg:flex-row">
+              <div className="flex flex-col">
+                <Image
+                  src={resources}
+                  alt="resources"
+                  width="1012"
+                  height="478"
+                  className="max-w-[573px] w-[473px] lg:w-[573px] min-w-[273px]"
+                />
+                <h2 className="text-3xl font-medium md:text-4xl">
+                  End to end workforce management solutions
+                </h2>
+                <Link href="/learnmore">
+                  <div className="flex items-center gap-4 align-middle">
+                    <h6 className="text-base text-indigo-900 ">Read More</h6>
+                    <ArrowRight className="text-indigo-900" />
+                  </div>
+                </Link>
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="flex gap-4">
+                  <Image
+                    src={resources}
+                    alt="resources"
+                    width="1012"
+                    height="478"
+                    className="max-w-[271px] w-[300px] lg:w-[800px] min-w-[271px]"
+                  />
+                  <div className="flex flex-col">
+                    <h2 className="text-xl font-medium md:text-2xl">
+                      End to end workforce management solutions
+                    </h2>
+                    <Link href="/learnmore">
+                      <div className="flex items-center gap-4 align-middle">
+                        <h6 className="text-base text-indigo-900 ">
+                          Read More
+                        </h6>
+                        <ArrowRight className="text-indigo-900" />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Image
+                    src={resources}
+                    alt="resources"
+                    width="1012"
+                    height="478"
+                    className="max-w-[271px] w-[271px] lg:w-[800px] min-w-[271px]"
+                  />
+                  <div className="flex flex-col">
+                    <h2 className="text-xl font-medium md:text-2xl">
+                      End to end workforce management solutions
+                    </h2>
+                    <Link href="/learnmore">
+                      <div className="flex items-center gap-4 align-middle">
+                        <h6 className="text-base text-indigo-900 ">
+                          Read More
+                        </h6>
+                        <ArrowRight className="text-indigo-900" />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
       </section>
     </div>
   );
