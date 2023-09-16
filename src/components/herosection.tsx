@@ -63,6 +63,7 @@ export default function herosection() {
   };
   return (
     <div className="flex flex-col px-6">
+      {/* Main Section  */}
       <main className="flex flex-col items-center w-full mx-auto md:justify-center md:flex-row">
         {/* SECTION TEXT */}
         <section className="items-start max-w-3xl p-4 pt-8 md:pt-32">
@@ -121,7 +122,7 @@ export default function herosection() {
 
       {/* TRUSTED PARTNERS  */}
       <div
-        className="flex flex-col items-center gap-4 mx-auto md:gap-20 md:flex-row md:p-8"
+        className="flex flex-col items-center gap-4 mx-auto my-10 md:gap-20 md:flex-row md:p-8"
         style={{
           border: "4px solid transparent",
           background:
