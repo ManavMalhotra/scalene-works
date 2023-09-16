@@ -230,19 +230,22 @@ export default function herosection() {
           </div>
         </div>
       </Container>
-      <Container className="flex flex-wrap items-center justify-center gap-6 md:flex-nowrap">
+      {/* Our Story */}
+      <Container className="flex flex-wrap items-center justify-between gap-6 md:flex-nowrap">
         <div className="">
           <Image
             src={mission}
             width="770"
             height="433"
             alt="mission"
-            className="max-w-[570px] w-[400px] min-w-[400px]"
+            className="max-w-[770px] w-[400px] lg:w-[770px] min-w-[400px]"
           />
         </div>
-        <div className="flex flex-col items-start justify-between pl-20">
-          <h3 className="text-lg font-medium ">Our Story</h3>
-          <p>This is the reason of description is mandatory</p>
+        <div className="flex flex-col items-start justify-center pr-12">
+          <h3 className="text-3xl font-medium ">Our Story</h3>
+          <p className="text-xl">
+            This is the reason of description is mandatory
+          </p>
           <Link href="/about">
             <div className="flex flex-row ">
               Learn More
@@ -252,26 +255,27 @@ export default function herosection() {
           <Separator />
           <div className="opacity-70">
             <div className="py-4">
-              <h3 className="text-base font-medium ">The global impact</h3>
-              <p className="text-sm">
+              <h3 className="text-2xl font-medium ">The global impact</h3>
+              <p className="text-lg">
                 This is the reason of description is mandatory
               </p>
             </div>
             <div className="py-4">
-              <h3 className="text-base font-medium">Making sense of self</h3>
-              <p className="text-sm">
+              <h3 className="text-2xl font-medium ">Making sense of self</h3>
+              <p className="text-lg">
                 This is the reason of description is mandatory
               </p>
             </div>
             <div className="py-4">
-              <h3 className="text-base font-medium">Making sense of self</h3>
-              <p className="text-sm">
+              <h3 className="text-2xl font-medium ">Making sense of self</h3>
+              <p className="text-lg">
                 This is the reason of description is mandatory
               </p>
             </div>
           </div>
         </div>
       </Container>
+
       {/* Annual Report  */}
       <Container className="bg-[#FF008E] w-full rounded-lg">
         <div className="flex flex-col-reverse gap-6 px-10 py-8 md:flex-row justify-normal">
