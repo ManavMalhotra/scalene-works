@@ -161,12 +161,12 @@ export default function Footer1() {
                 <TableRow
                   style={{
                     paddingBottom: "22px",
+                    borderBottom: "2px solid #E5E5E5"
                   }}
                 >
                   <TableCell>Talent Acquisition</TableCell>
                   <TableCell>Talent Management</TableCell>
                 </TableRow>
-                <Separator />
                 {/* ITEM #2 */}
                 <TableRow
                   style={{
