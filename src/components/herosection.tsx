@@ -62,7 +62,7 @@ export default function herosection() {
     },
   };
   return (
-    <div className="flex flex-col px-6">
+    <div className="flex flex-col">
       {/* Main Section  */}
       <main className="flex flex-col items-center w-full mx-auto md:justify-center md:flex-row">
         {/* SECTION TEXT */}
