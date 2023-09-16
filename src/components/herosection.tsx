@@ -33,6 +33,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Container from "@/components/Container";
 
 export default function herosection() {
   interface CompanyLogo {
@@ -157,7 +158,7 @@ export default function herosection() {
       </div>
 
       {/* STATS  */}
-      <div className="container px-10 py-8 my-8">
+      <Container>
         <h1 className="text-3xl md:text-5xl">
           A cutting-edge talent solutions organisation with
           <span className="text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
@@ -190,9 +191,9 @@ export default function herosection() {
             <p>Years of combined experience in talent management</p>
           </div>
         </div>
-      </div>
+      </Container>
       {/* Mission  */}
-      <div className="container flex flex-col gap-6 px-10 py-8 my-8 ">
+      <Container className="flex flex-col gap-6 ">
         <h3 className="text-sm font-bold text-[#FF008E]">Mission</h3>
         <div className="flex py-6">
           <div className="flex flex-col justify-between flex-[8] pr-6">
@@ -228,8 +229,8 @@ export default function herosection() {
             </Table>
           </div>
         </div>
-      </div>
-      <div className="container flex flex-wrap items-center justify-center gap-6 px-10 py-8 my-8 md:flex-nowrap">
+      </Container>
+      <Container className="flex flex-wrap items-center justify-center gap-6 md:flex-nowrap">
         <div className="">
           <Image
             src={mission}
@@ -270,10 +271,10 @@ export default function herosection() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
       {/* Annual Report  */}
-      <div className="bg-[#FF008E] w-full rounded-lg container my-16">
-        <div className="flex flex-col-reverse gap-6 px-10 py-8 md:flex-row">
+      <Container className="bg-[#FF008E] w-full rounded-lg">
+        <div className="flex flex-col-reverse gap-6 px-10 py-8 md:flex-row justify-normal">
           <div className="flex flex-col justify-around gap-4 text-white">
             <p>Annual report</p>
             <h2 className="text-xl md:text-3xl ">
@@ -288,9 +289,9 @@ export default function herosection() {
             <Image src={cert} width="524" height="295" alt="certificate" />
           </div>
         </div>
-      </div>
+      </Container>
       {/* INDUSTRIES */}
-      <div className="container flex flex-col gap-4 my-16">
+      <Container className="flex flex-col gap-4 ">
         <h3 className="text-sm font-bold text-[#FF008E]">INDUSTRIES</h3>
         <h2 className="text-3xl md:text-4xl">
           We got you covered in every industry.
@@ -422,9 +423,9 @@ export default function herosection() {
             </AccordionItem>
           </Accordion>
         </div>
-      </div>
+      </Container>
       {/* CASE STUDIES */}
-      <section className="flex flex-col gap-4 m-auto mx-6 my-16 md:container md:mx-auto">
+      <Container className="flex flex-col gap-4">
         <h3 className="text-sm font-bold text-[#FF008E]">CASE STUDIES</h3>
         <h2 className="text-3xl md:text-4xl">Bring agility </h2>
         <p>
@@ -437,7 +438,7 @@ export default function herosection() {
             <ArrowRight className="text-indigo-900" />
           </div>
         </Link>
-        <div className="flex flex-col-reverse w-full gap-4 pt-8 justify-evenly lg:flex-row">
+        <div className="flex flex-col-reverse justify-between w-full gap-4 pt-8 lg:flex-row">
           <div className="grid grid-cols-3 gap-8 lg:flex lg:flex-col md:w-1/5">
             <div>
               <h3 className="text-2xl font-medium ">130</h3>
@@ -458,7 +459,7 @@ export default function herosection() {
               </p>
             </div>
           </div>
-          <div className="w-full">
+          <div>
             <Image
               src={casestudies}
               width="1012"
@@ -490,9 +491,9 @@ export default function herosection() {
             )
           )}
         </div>
-      </section>
+      </Container>
       {/* Resources/ Insights  */}
-      <section className="flex flex-col gap-4 m-auto mx-6 my-16 md:container md:mx-auto">
+      <Container className="flex flex-col gap-4 ">
         <h3 className="text-sm font-bold text-[#FF008E]">
           Resources / Insights
         </h3>
@@ -575,7 +576,7 @@ export default function herosection() {
             </div>
           </TabsContent>
         </Tabs>
-      </section>
+      </Container>
     </div>
   );
 }

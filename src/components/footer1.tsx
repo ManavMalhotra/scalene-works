@@ -66,7 +66,7 @@ export default function Footer1() {
         </div>
         <Separator />
         {/* Footer Middle */}
-        <div className="flex flex-col py-8 md:flex-row lg:flex lg:items-start lg:justify-between">
+        <div className="flex flex-col py-8 md:flex-row lg:flex lg:items-start lg:justify-between gap-28">
           <div className="w-full pr-0 lg:w-2/5 lg:pr-20">
             <p className="text-base leading-7 text-black">
               ScaleneWorks is a global talent solutions organization with over a

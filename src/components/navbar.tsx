@@ -5,7 +5,6 @@ import Link from "next/link";
 import "./navbar.css";
 import * as React from "react";
 import { Check, ChevronDown, Globe, Search, Menu, X } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
