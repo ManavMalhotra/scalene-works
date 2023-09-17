@@ -15,7 +15,6 @@
 .search {
   border: 1px solid rgba(105, 105, 105, 0.582);
   border-radius: 26px 0 0 26px;
-  font-weight: 700;
 }
 .search:focus {
   border: 1px solid rgba(105, 105, 105, 0.582);

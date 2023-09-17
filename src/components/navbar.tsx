@@ -5,7 +5,6 @@ import Link from "next/link";
 import "./navbar.css";
 import * as React from "react";
 import { Check, ChevronDown, Globe, Search, Menu, X } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -121,10 +120,9 @@ export default function Navbar() {
         </>
       ) : (
         <div className="hidden md:flex w-[70%] ">
-          <input
-            className="flex w-full h-10 px-6 py-2 mx-3 font-medium txt-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 animation search"
-            placeholder="type here to search"
-          />
+          <input className="flex w-full h-10 px-6 py-2 mx-3 font-medium txt-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 animation search"
+          placeholder="type here to search" />
+          
           <Button
             variant="outline"
             className={`animation py-2 px-5 border-s-muted rounded-[26px] bg-transparent text-black`}
