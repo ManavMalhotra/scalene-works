@@ -12,6 +12,19 @@
   -webkit-animation: fadeInBottom 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
   animation: fadeInBottom 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
 }
+.search {
+  border: 1px solid rgba(105, 105, 105, 0.582);
+  border-radius: 26px 0 0 26px;
+  font-weight: 700;
+}
+.search:focus {
+  border: 1px solid rgba(105, 105, 105, 0.582);
+  outline: none;
+  font-weight: 700;
+}
+.search:active {
+  border: 1px solid rgba(105, 105, 105, 0.582);
+}
 
 @keyframes fadeInBottom {
   0% {

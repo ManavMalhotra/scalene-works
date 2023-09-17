@@ -121,9 +121,9 @@ export default function Navbar() {
         </>
       ) : (
         <div className="hidden md:flex w-[70%] ">
-          <Input
-            placeholder="Search..."
-            className="w-full border-l-4 border-black rounded-full animation "
+          <input
+            className="flex w-full h-10 px-6 py-2 mx-3 font-medium txt-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 animation search"
+            placeholder="type here to search"
           />
           <Button
             variant="outline"
@@ -153,11 +153,9 @@ export default function Navbar() {
       )}
       {/* BUTTONS */}
       <div className="flex items-center justify-end gap-3 md:hidden">
-      <Sheet>
+        <Sheet>
           <SheetTrigger>
-            <Menu
-              className="w-8 h-8 text-purple-600 md:hidden"
-            />
+            <Menu className="w-8 h-8 text-purple-600 md:hidden" />
           </SheetTrigger>
           <SheetContent
             side={"left"}
@@ -191,9 +189,7 @@ export default function Navbar() {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-
       </div>
-      
     </nav>
   );
 }
