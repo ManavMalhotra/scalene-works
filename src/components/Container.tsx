@@ -10,7 +10,7 @@ type ContainerProps = {
     ...props
   }: ContainerProps) {
     return (
-      <div className={cn("px-32 my-10", className)} {...props}>
+      <div className={cn("px-48 my-10", className)} {...props}>
         {children}
       </div>
     );
