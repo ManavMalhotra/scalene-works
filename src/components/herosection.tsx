@@ -3,25 +3,17 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import supportAgent from "../../public/support-agent.svg";
 
-import hero from "../../public/hero.svg";
 import accenture from "../../public/accenture.png";
 import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
 import kpmg from "../../public/kpmg.png";
 import casestudies from "../../public/casestudies.svg";
 import resources from "../../public/resources.svg";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import Main from "@/components/Home/Main";
+import Talent from "@/components/Home/Talent";
 
 import mission from "../../public/mission.svg";
 
@@ -63,65 +55,100 @@ export default function herosection() {
   };
   return (
     <div className="flex flex-col">
-      {/* Main Section  */}
-      <main className="flex flex-col items-center w-full mx-auto md:justify-center md:flex-row">
-        {/* SECTION TEXT */}
-        <section className="items-start max-w-3xl p-4 pt-8 md:pt-32">
-          <h3 className="mb-4 text-sm text-left opacity-50 md:text-lg">
-            #because Scalene Works
-          </h3>
-          <h1
-            className="mb-4 text-3xl font-bold text-left text-transparent md:text-5xl bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 md:text-left bg-clip-text"
-            style={{ lineHeight: "1.3" }}
-          >
-            Bridging a million distant dreams.
-          </h1>
 
-          <div className="flex flex-row items-center w-full max-w-6xl gap-4 md:flex-row">
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="p-6 text-base md:text-xl let-700 rounded-3xl xsm:w-full md:w-auto"
-              >
+      <Main />
+
+      {/* Talent  */}
+      
+
+      {/* Resources/ Insights  */}
+      <Container className="flex flex-col gap-4 ">
+        <h3 className="text-sm font-bold text-[#5557DF]">
+          Resources / Insights
+        </h3>
+        <h2 className="text-3xl font-medium md:text-4xl">
+          Expert insights shaping the future, empowering the next generation.
+        </h2>
+        <Tabs defaultValue="Productivity" className="w-[400px]">
+          <TabsList>
+            <TabsTrigger value="Leadership">Leadership</TabsTrigger>
+            <TabsTrigger value="Productivity">Productivity</TabsTrigger>
+            <TabsTrigger value="Technologies">Technologies</TabsTrigger>
+            <TabsTrigger value="Management">Management</TabsTrigger>
+          </TabsList>
+          <TabsContent value="Productivity">
+            <div className="flex flex-col gap-5 lg:flex-row">
+              <div className="flex flex-col">
                 <Image
-                  src={supportAgent}
-                  alt="support agent"
-                  width="30"
-                  height="30"
-                  className="mr-2"
-                  priority={true}
+                  src={resources}
+                  alt="resources"
+                  width="1012"
+                  height="478"
+                  className="max-w-[573px] w-[473px] lg:w-[573px] min-w-[273px]"
                 />
-                <span style={{ color: "#9747FF" }}>Contact Sales</span>
-              </Button>
-            </Link>
-
-            <Link href="/recruit">
-              <Button
-                variant="outline"
-                className="p-6 text-base md:text-xl rounded-3xl xsm:w-full md:w-auto"
-                style={{ color: "#9747FF" }}
-              >
-                Recruit <ChevronRight />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* HERO IMAGE  */}
-        <div className="max-w-lg">
-          <Image
-            src={hero}
-            alt="hero design"
-            width="680"
-            height="592"
-            className="object-contain min-w-[10] w-96 md:w-[680px]"
-          />
-          {/* w-[680] h-[592] */}
-        </div>
-      </main>
+                <h2 className="text-3xl font-medium md:text-4xl">
+                  End to end workforce management solutions
+                </h2>
+                <Link href="/learnmore">
+                  <div className="flex items-center gap-4 align-middle">
+                    <h6 className="text-base text-indigo-900 ">Read More</h6>
+                    <ArrowRight className="text-indigo-900" />
+                  </div>
+                </Link>
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="flex gap-4">
+                  <Image
+                    src={resources}
+                    alt="resources"
+                    width="1012"
+                    height="478"
+                    className="max-w-[271px] w-[300px] lg:w-[800px] min-w-[271px]"
+                  />
+                  <div className="flex flex-col">
+                    <h2 className="text-xl font-medium md:text-2xl">
+                      End to end workforce management solutions
+                    </h2>
+                    <Link href="/learnmore">
+                      <div className="flex items-center gap-4 align-middle">
+                        <h6 className="text-base text-indigo-900 ">
+                          Read More
+                        </h6>
+                        <ArrowRight className="text-indigo-900" />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Image
+                    src={resources}
+                    alt="resources"
+                    width="1012"
+                    height="478"
+                    className="max-w-[271px] w-[271px] lg:w-[800px] min-w-[271px]"
+                  />
+                  <div className="flex flex-col">
+                    <h2 className="text-xl font-medium md:text-2xl">
+                      End to end workforce management solutions
+                    </h2>
+                    <Link href="/learnmore">
+                      <div className="flex items-center gap-4 align-middle">
+                        <h6 className="text-base text-indigo-900 ">
+                          Read More
+                        </h6>
+                        <ArrowRight className="text-indigo-900" />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </Container>
 
       {/* TRUSTED PARTNERS  */}
-      <div
+      {/* <div
         className="flex flex-col items-center gap-4 mx-auto my-10 md:gap-20 md:flex-row md:p-8"
         style={{
           border: "4px solid transparent",
@@ -156,83 +183,10 @@ export default function herosection() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* STATS  */}
-      <Container>
-        <h1 className="text-3xl md:text-5xl">
-          A cutting-edge talent solutions organisation with
-          <span className="text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
-            10+ years of experience
-          </span>
-          , global reach, and a team of seasoned experts, ready to empower the
-          next gen.
-        </h1>
-        <div className="flex flex-wrap items-start w-full gap-2 pt-16 mx-auto md:gap-20 md:flex-nowrap">
-          <div className=" max-w-[200px] flex flex-col gap-2">
-            <Separator className="bg-[#252424] md:block" />
-            <h3 className="font-bold">6,800+</h3>
-            <p className="text-gray-600">
-              Diverse talented individuals with a global presence
-            </p>
-          </div>
-          <div className="flex flex-col w-1/2 gap-2 lg:w-1/4 ">
-            <Separator className="bg-[#252424] md:block" />
-            <h3 className="font-bold">8+</h3>
-            <p>Global presence in India, USA, UK, and Poland</p>
-          </div>
-          <div className="flex flex-col w-1/2 gap-2 lg:w-1/4 ">
-            <Separator className="bg-[#252424] md:block" />
-            <h3 className="font-bold">8+</h3>
-            <p>Healthcare, IT and BFSI industry</p>
-          </div>
-          <div className="flex flex-col w-1/2 gap-2 lg:w-1/4 ">
-            <Separator className="bg-[#252424] md:block" />
-            <h3 className="font-bold">200+</h3>
-            <p>Years of combined experience in talent management</p>
-          </div>
-        </div>
-      </Container>
-      {/* Mission  */}
-      <Container className="flex flex-col gap-6 ">
-        <h3 className="text-sm font-bold text-[#FF008E]">Mission</h3>
-        <div className="flex py-6">
-          <div className="flex flex-col justify-between flex-[8] pr-6">
-            <h2 className="text-3xl md:text-4xl">Empowering Individuals</h2>
-            <p>
-              A cutting-edge talent solutions organization with a 10+ years of
-              experience, global reach, and a team of seasoned experts, ready to
-              empower the next generation.
-            </p>
-            <Link href="/about">
-              <div className="flex flex-row opacity-75">
-                Learn More
-                <ChevronRight />
-              </div>
-            </Link>
-          </div>
-          <div className="flex-[6] ">
-            <Table>
-              <TableBody>
-                <TableRow>
-                  <TableCell>Mission</TableCell>
-                  <TableCell>People</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Exports</TableCell>
-                  <TableCell>Partners</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Clients</TableCell>
-                  <TableCell>Stories</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
-        </div>
-      </Container>
       {/* Our Story */}
-      <Container className="flex flex-wrap items-center justify-between gap-6 md:flex-nowrap">
+      {/* <Container className="flex flex-wrap items-center justify-between gap-6 md:flex-nowrap">
         <div className="">
           <Image
             src={mission}
@@ -275,10 +229,10 @@ export default function herosection() {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
 
       {/* Annual Report  */}
-      <Container className="bg-[#FF008E] w-full rounded-lg">
+      <Container className="w-full bg-black rounded-lg">
         <div className="flex flex-col-reverse gap-6 px-10 py-8 md:flex-row justify-normal">
           <div className="flex flex-col justify-around gap-4 text-white">
             <p>Annual report</p>
@@ -496,91 +450,6 @@ export default function herosection() {
             )
           )}
         </div>
-      </Container>
-      {/* Resources/ Insights  */}
-      <Container className="flex flex-col gap-4 ">
-        <h3 className="text-sm font-bold text-[#FF008E]">
-          Resources / Insights
-        </h3>
-        <h2 className="text-3xl font-medium md:text-4xl">
-          Expert insights shaping the future, empowering the next generation.
-        </h2>
-        <Tabs defaultValue="Productivity" className="w-[400px]">
-          <TabsList>
-            <TabsTrigger value="Leadership">Leadership</TabsTrigger>
-            <TabsTrigger value="Productivity">Productivity</TabsTrigger>
-            <TabsTrigger value="Technologies">Technologies</TabsTrigger>
-            <TabsTrigger value="Management">Management</TabsTrigger>
-          </TabsList>
-          <TabsContent value="Productivity">
-            <div className="flex flex-col gap-5 lg:flex-row">
-              <div className="flex flex-col">
-                <Image
-                  src={resources}
-                  alt="resources"
-                  width="1012"
-                  height="478"
-                  className="max-w-[573px] w-[473px] lg:w-[573px] min-w-[273px]"
-                />
-                <h2 className="text-3xl font-medium md:text-4xl">
-                  End to end workforce management solutions
-                </h2>
-                <Link href="/learnmore">
-                  <div className="flex items-center gap-4 align-middle">
-                    <h6 className="text-base text-indigo-900 ">Read More</h6>
-                    <ArrowRight className="text-indigo-900" />
-                  </div>
-                </Link>
-              </div>
-              <div className="flex flex-col gap-3">
-                <div className="flex gap-4">
-                  <Image
-                    src={resources}
-                    alt="resources"
-                    width="1012"
-                    height="478"
-                    className="max-w-[271px] w-[300px] lg:w-[800px] min-w-[271px]"
-                  />
-                  <div className="flex flex-col">
-                    <h2 className="text-xl font-medium md:text-2xl">
-                      End to end workforce management solutions
-                    </h2>
-                    <Link href="/learnmore">
-                      <div className="flex items-center gap-4 align-middle">
-                        <h6 className="text-base text-indigo-900 ">
-                          Read More
-                        </h6>
-                        <ArrowRight className="text-indigo-900" />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <Image
-                    src={resources}
-                    alt="resources"
-                    width="1012"
-                    height="478"
-                    className="max-w-[271px] w-[271px] lg:w-[800px] min-w-[271px]"
-                  />
-                  <div className="flex flex-col">
-                    <h2 className="text-xl font-medium md:text-2xl">
-                      End to end workforce management solutions
-                    </h2>
-                    <Link href="/learnmore">
-                      <div className="flex items-center gap-4 align-middle">
-                        <h6 className="text-base text-indigo-900 ">
-                          Read More
-                        </h6>
-                        <ArrowRight className="text-indigo-900" />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
       </Container>
     </div>
   );
