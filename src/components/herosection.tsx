@@ -3,25 +3,17 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import supportAgent from "../../public/support-agent.svg";
 
-import hero from "../../public/hero.svg";
 import accenture from "../../public/accenture.png";
 import capegami from "../../public/capegami.png";
 import genericElectric from "../../public/generalElectric.png";
 import kpmg from "../../public/kpmg.png";
 import casestudies from "../../public/casestudies.svg";
 import resources from "../../public/resources.svg";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import Main from "@/components/Home/Main";
+import Talent from "@/components/Home/Talent";
 
 import mission from "../../public/mission.svg";
 
@@ -63,162 +55,11 @@ export default function herosection() {
   };
   return (
     <div className="flex flex-col">
-      {/* Main Section  */}
-      <main className="flex flex-col items-center w-full mx-auto md:justify-center md:flex-row">
-        {/* SECTION TEXT */}
-        <section className="px-32 py-8 md:pt-16">
-          <h3 className="mb-4 text-sm text-center opacity-50 md:text-lg">
-            #because Scalene Works
-          </h3>
-          <h1
-            className="mb-4 text-3xl font-bold text-center text-transparent md:text-8xl bg-clip-text "
-            style={{
-              lineHeight: "1.2",
-              // background: linear-gradient(93deg, #9747FF 5.96%, #FF008E 91.22%);
-              background:
-                "linear-gradient(93deg, #9747FF 5.96%, #FF008E 91.22%)",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              MozBackgroundClip: "text",
-            }}
-          >
-            Improving talent experiences globally.
-          </h1>
 
-          {/* <div className="flex flex-row items-center justify-center w-full gap-4 md:flex-row">
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="p-6 text-base md:text-xl let-700 rounded-3xl xsm:w-full md:w-auto"
-              >
-                <Image
-                  src={supportAgent}
-                  alt="support agent"
-                  width="30"
-                  height="30"
-                  className="mr-2"
-                  priority={true}
-                />
-                <span style={{ color: "#9747FF" }}>Contact Sales</span>
-              </Button>
-            </Link>
+      <Main />
 
-            <Link href="/recruit">
-              <Button
-                variant="outline"
-                className="p-6 text-base md:text-xl rounded-3xl xsm:w-full md:w-auto"
-                style={{ color: "#9747FF" }}
-              >
-                Recruit <ChevronRight />
-              </Button>
-            </Link>
-          </div> */}
-        </section>
-
-        {/* HERO IMAGE  */}
-        {/* <div className="max-w-lg">
-          <Image
-            src={hero}
-            alt="hero design"
-            width="680"
-            height="592"
-            className="object-contain min-w-[10] w-96 md:w-[680px]"
-          />
-        </div> */}
-      </main>
-
-      {/* Mission  */}
-      <Container
-        className="flex flex-col w-full gap-6 "
-        style={{
-          background: "linear-gradient(92deg, #9848FF 20.4%, #FF008E 90.29%)",
-        }}
-      >
-        <div className="flex py-6">
-          <div className="flex flex-col justify-between flex-[8] pr-6">
-            <h2 className="text-3xl font-medium text-white md:text-4xl">
-              Talent to drive your business forward
-            </h2>
-          </div>
-          <div className="flex-[6] ">
-            <Table className="text-white hover:bg-transparent ">
-              <TableBody>
-                <TableRow
-                  style={{
-                    borderBottom: "none",
-                  }}
-                >
-                  <TableCell>The Scalene Difference</TableCell>
-                  <TableCell>Regional Experts</TableCell>
-                </TableRow>
-                <TableRow
-                  style={{
-                    borderBottom: "none",
-                  }}
-                >
-                  <TableCell>RPO Explained</TableCell>
-                  <TableCell>Get in Touch</TableCell>
-                </TableRow>
-                <TableRow
-                  style={{
-                    borderBottom: "none",
-                  }}
-                >
-                  <TableCell>Our Services</TableCell>
-                  <TableCell>Join Us</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </div>
-        </div>
-      </Container>
-
-      {/* STATS  */}
-      <Container>
-        <h1 className="text-3xl font-normal md:text-5xl">
-          A cutting-edge talent solutions organisation with
-          <span className="text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
-            10+ years of experience
-          </span>
-          , global reach, and a team of seasoned experts, ready to empower the
-          next gen.
-        </h1>
-        <div className="flex flex-wrap items-start w-full gap-2 pt-16 mx-auto md:gap-20 md:flex-nowrap">
-          <div className="flex flex-col w-1/2 gap-2 text-center lg:w-1/4">
-            <h3 className="text-5xl font-bold text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
-              6,800+
-            </h3>
-            <p className="text-left text-gray-600">
-              Diverse talented individuals with a global presence
-            </p>
-          </div>
-          <div className="flex flex-col w-1/2 gap-2 text-center lg:w-1/4">
-            <h3 className="text-5xl font-bold text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
-              8+
-            </h3>
-            <p className="text-left text-gray-600">
-              Global presence in India, USA, UK, and Poland
-            </p>
-          </div>
-          <div className="flex flex-col w-1/2 gap-2 text-center lg:w-1/4">
-            <h3 className="text-5xl font-bold text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
-              8+
-            </h3>
-            <p className="text-left text-gray-600">
-              Healthcare, IT and BFSI industry
-            </p>
-          </div>
-          <div className="flex flex-col w-1/2 gap-2 text-center lg:w-1/4">
-            <h3 className="text-5xl font-bold text-transparent bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text">
-              200+
-            </h3>
-            <p className="text-left text-gray-600">
-              Years of combined experience in talent management
-            </p>
-          </div>
-        </div>
-      </Container>
+      {/* Talent  */}
+      
 
       {/* Resources/ Insights  */}
       <Container className="flex flex-col gap-4 ">
