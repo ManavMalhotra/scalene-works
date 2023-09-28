@@ -66,7 +66,7 @@ export default function Footer1() {
         </div>
         <Separator />
         {/* Footer Middle */}
-        <div className="flex flex-col py-8 md:flex-row lg:flex lg:items-start lg:justify-between gap-28">
+        <div className="flex flex-col py-8 md:flex-row lg:flex lg:items-start lg:justify-between">
           <div className="w-full pr-0 lg:w-2/5 lg:pr-20">
             <p className="text-base leading-7 text-black">
               ScaleneWorks is a global talent solutions organization with over a
@@ -161,12 +161,12 @@ export default function Footer1() {
                 <TableRow
                   style={{
                     paddingBottom: "22px",
-                    borderBottom: "2px solid #E5E5E5"
                   }}
                 >
                   <TableCell>Talent Acquisition</TableCell>
                   <TableCell>Talent Management</TableCell>
                 </TableRow>
+                <Separator />
                 {/* ITEM #2 */}
                 <TableRow
                   style={{

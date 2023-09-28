@@ -94,17 +94,6 @@ export default function Navbar() {
           </div>
           <div className="hidden gap-3 md:flex">
             <Button
-              className="  sm:block py-2 px-4 rounded-[26px] backdrop-blur-20"
-              style={{
-                background:
-                  "linear-gradient(265deg, #0FFB00 -6.69%, #0D8C05 101.92%)",
-              }}
-            >
-              Signup
-            </Button>
-            <LanguageSelector open={open} setOpen={setOpen} />
-
-            <Button
               variant="outline"
               className={`py-2 px-5 border-s-muted rounded-[26px] bg-transparent text-black `}
               onClick={handleSearch}
@@ -116,13 +105,16 @@ export default function Navbar() {
             >
               <Search className="w-6 h-auto text-purple-600" />
             </Button>
+            <LanguageSelector open={open} setOpen={setOpen} />
           </div>
         </>
       ) : (
         <div className="hidden md:flex w-[70%] ">
-          <input className="flex w-full h-10 px-6 py-2 mx-3 font-medium txt-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 animation search"
-          placeholder="type here to search" />
-          
+          <input
+            className="flex w-full h-10 px-6 py-2 mx-3 font-medium txt-sm placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 animation search"
+            placeholder="type here to search"
+          />
+
           <Button
             variant="outline"
             className={`animation py-2 px-5 border-s-muted rounded-[26px] bg-transparent text-black`}

@@ -1,9 +1,9 @@
-import Herosection from "@/components/herosection";
+import Home from "./Home"
 
-export default function Home() {
+export default function page() {
   return (
-    <main className="">
-      <Herosection />
+    <main className="flex flex-col ">
+      <Home />
     </main>
   );
 }
