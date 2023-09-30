@@ -17,10 +17,10 @@ import mission from "@/public/mission.svg";
 import { Separator } from "@/components/ui/separator";
 import cert from "@/public/certificate.svg";
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
 import Container from "@/components/Container";
 
@@ -30,15 +30,17 @@ import OurServices from "@/components/Home/OurServices";
 import GlobalHiringIndex from "@/components/Home/GlobalHiringIndex";
 import Industries from "@/components/Home/Industries";
 import CaseStudies from "@/components/Home/CaseStudies";
+import OurPresence from "@/components/Home/OurPresence";
 export default function Home() {
-    return (
-        <div className="flex flex-col items-start justify-center mx-auto">
-            <Main />
-            <Talent />
-            <OurServices />
-            <GlobalHiringIndex />
-            <Industries />
-            <CaseStudies />
-        </div>
-    );
+  return (
+    <div className="flex flex-col items-start justify-center mx-auto">
+      <Main />
+      <Talent />
+      <OurServices />
+      <GlobalHiringIndex />
+      <Industries />
+      <CaseStudies />
+      <OurPresence />
+    </div>
+  );
 }
